@@ -9,10 +9,18 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "express": "^5.2.1",
     "fs": "^0.0.1-security",
     "http": "^0.0.1-security"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YogitaBhikajiPtil/sharpenerAssignment.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YogitaBhikajiPtil/sharpenerAssignment/issues"
+  },
+  "homepage": "https://github.com/YogitaBhikajiPtil/sharpenerAssignment#readme",
+  "description": ""
 }
