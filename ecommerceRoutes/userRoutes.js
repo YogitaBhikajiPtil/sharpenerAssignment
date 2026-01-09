@@ -1,18 +1,12 @@
 const express = require("express");
 const router = express.Router();
+const userController = require("../ecommerceController/userController");
 
-router.get("/users",(req,res)=>{
-    res.send(`Fetch all users.`);
-})
+router.get("/users",userController.getUser)
 
-router.post("/users",(req,res)=>{
-    res.send(`Add a new user.`)
-})
+router.post("/users",userController.postUser)
 
-router.get("/users/:id",(req,res)=>{
-    const userId = req.params.id;
-    res.send(`userId is ${userId}`)
-})
+router.get("/users/:id",userController.getUserById)
 
 
 module.exports = router;
