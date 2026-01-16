@@ -5,7 +5,11 @@ app.use(express.json())
 const mysqlConnection = require("./mysqlConnection");
 const studentRouter = require("./routes/studentRouter");
 
+app.get("/test", (req, res) => {
+  res.send("Server is reachable!");
+});
+
 app.use("/student",studentRouter)
-app.listen(8080,()=>{
-    console.log("server is listening 8080")
+app.listen(3000,()=>{
+    console.log("server is listening 3000")
 })
