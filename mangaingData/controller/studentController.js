@@ -56,7 +56,7 @@ const deleteEntry = (req,res)=>{
       res.status(400).send("student is not found")
       return;
     }
-
+    
    res.status(200).send(`user with ${id} is deleted`);
   })
 }

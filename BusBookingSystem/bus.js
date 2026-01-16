@@ -48,7 +48,7 @@ connection.connect((err)=>{
     connection.execute( `
         create table payments(
         id int auto_increment primary key,
-        amountPaid int,
+        amountPaid int, 
         paymentStatus varchar(20)
         )`,(err)=>{
             if(err){
