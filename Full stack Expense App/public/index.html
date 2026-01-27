@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        max-width: 600px;
+        margin:20px auto;
+        padding: 0 20px;
+        background-color: #7c697a;
+    }
+    h1{
+        text-align: center;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+      
+    }
+    input,select,button{
+        padding: 10px;
+        font-size:16px;
+    }
+    li{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+</style>
+<body>
+    <h1>Expense Tracker</h1>
+    <form id="expense-form">
+            <input type="number" id="amount" name="Expense Amount" placeholder="Expense Amount" required>
+            <input type="text" id="description" name="Description" placeholder="Description" required>
+            <select id="category">
+                <option value="">Select category</option>
+                <option value="Shopping" name="Shopping">Shopping</option>
+                <option name="food">food</option>
+                <option name="Travel">Travel</option>
+            </select>
+            <button type="submit">Add Expense</button>
+    </form>
+    <ul id="expense-list"></ul>
+    <script src="./frontend.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</body>
+</html>
+
