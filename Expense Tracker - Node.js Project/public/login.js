@@ -41,3 +41,5 @@ function goToSignup() {
   window.location.href = "index.html";
 }
 
+localStorage.setItem("isLoggedIn", "true");
+window.location.href = "expense.html";

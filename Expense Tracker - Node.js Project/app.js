@@ -9,6 +9,9 @@ app.use(cors());
 // Middleware
 app.use(express.json());
 
+require("./models/user");
+require("./models/expense");
+
 const path = require("path");
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -16,11 +19,14 @@ app.use(express.static(path.join(__dirname, "public")));
 const authRoutes = require("./routes/authRoutes");
 app.use("/auth", authRoutes);
 
+const expenseRoutes = require("./routes/expenseRoutes");
+app.use("/expenses", expenseRoutes);
+
 app.get("/", (req, res) => {
   res.send("Server is running ✅");
 });
 
-// Sync database and start server
+
 sequelize.sync()
   .then(() => {
     console.log("Tables Created");
